@@ -62,7 +62,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
       setMovies(request.data.results);
     }
     fetchData();
-  }, []);
+  }, [fetchUrl]);
 
   const opts = {
     height: "390",
@@ -94,12 +94,15 @@ function Row({ title, fetchUrl, isLargeRow }) {
       {/* <div className="row__posters"> */}
       <Swiper
         spaceBetween={10}
-        slidesPerView={isLargeRow ? 8 : 5}
+        // slidesPerView={isLargeRow ? 8 : 5}
+        slidesPerView={"auto"}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
         navigation={true}
         modules={[Navigation]}
-        className="row__posters mySwiper"
+        className={`row__posters mySwiper ${
+          isLargeRow ? "row__postersLarge" : ""
+        }`}
       >
         {movies.map((movie, idx) => (
           <SwiperSlide key={idx}>
