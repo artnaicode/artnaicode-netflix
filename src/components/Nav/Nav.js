@@ -9,10 +9,10 @@ function Nav() {
       if (window.scrollY > 100) {
         setShow(true);
       } else setShow(false);
+      return () => {
+        window.removeEventListener("scroll");
+      };
     });
-    return () => {
-      window.removeEventListener("scroll");
-    };
   }, []);
 
   return (
@@ -24,7 +24,7 @@ function Nav() {
       />
       <img
         className="nav__avatar"
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQwWMJbZoZ26ZyYB8M-1e7OLBVUWXRLNSO6A&usqp=CAU"
+        src="https://occ-0-64-58.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABYnnca7HCf0z4YHtIK5R8MIGCeMyodAsxBYSBmMkYHqjSw46VWWyNQirfwxT-CkbxPkp-G84Wu-iOMwGG-r9QAs.png?r=f71"
         alt="Netflix Avatar"
       />
     </nav>

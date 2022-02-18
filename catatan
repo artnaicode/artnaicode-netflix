@@ -1,49 +1,57 @@
 Title: Artnaicode Netflix (Step 4)
 Inspiration: https://www.youtube.com/watch?v=XtMThy8QKqU&t=1s
 Technologies: Reactjs
-Dependencies: 
+Dependencies: react-youtube. movie-trailer, swiper, react-icons
 
 Description: Create Artnaicode Netflix with:
+
 1. Get TMDB Api
 2. Create React App
 3. Setup Firebase
- - Create Project Firebase
- - Create Hosting Firebase : https://artnaicode-netflix.web.app/
+
+- Create Project Firebase
+- Create Hosting Firebase : https://artnaicode-netflix.web.app/
+
 4. npm i -g firebase-tools
 5. npm i axios
 6. npm i react-youtube
 7. npm i movie-trailer
 8. npm i swiper
+9. npm i react-icons
 
 Setup Firebase:
+
 1.
 
 This knowledge:
+
 1. Random image for data
-    Math.floor(Math.random() * return.data.results.length - 1)
+   Math.floor(Math.random() \* return.data.results.length - 1)
 
 2. Truncate
-    function truncate(str, n){
-      return str?.length > n ? str.substr(0, n - 1) : str;
-    }
+   function truncate(str, n){
+   return str?.length > n ? str.substr(0, n - 1) : str;
+   }
 
 3. Scroll add background
-    window.addEventListener("scroll", () => {
-      if(window.scrollY > 100) {
-        setShow(true)
-      } else setShow(false)
-    })
-    return () => {
-      window.removeEventListener("scroll")
-    }
+   window.addEventListener("scroll", () => {
+   if(window.scrollY > 100) {
+   setShow(true)
+   } else setShow(false)
+   })
+   return () => {
+   window.removeEventListener("scroll")
+   }
 4. react youtube
 5. movie trailer
+6. swiper
+7. react icons
 
 Deploy:
+
 1. firebase logout
 2. firebase login
 3. firebase init
 4. y, hosting configure firebase, existing, directory "build", rewrite "y", deploy github "n"
 5. npm run build
 6. firebase deploy
-    
